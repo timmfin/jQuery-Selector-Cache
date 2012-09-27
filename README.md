@@ -12,26 +12,26 @@ Usage
 ------------
 
 ### Overview
-Instead of `$('div')` use `$.sc('div')`
+Instead of `$('div')` use `$$('div')`
 
 ### Get
-`$.sc('div')`
+`$$('div')`
 
-The next time you call `$.sc('div')` it will be fetched from the cache.
+The next time you call `$$('div')` it will be fetched from the cache.
 
 ### Clear
-`$.sc('div', 'clear')`
+`$$('div', 'clear')`
 
-Invalidates the cache. The next time you call `$.sc('div')` It will return fresh results.
+Invalidates the cache. The next time you call `$$('div')` It will return fresh results.
 
 ### Fresh
-`$.sc('div', 'fresh')`
+`$$('div', 'fresh')`
 
-Shortcut for doing `$.sc('div', 'clear')` `$.sc('div')`
+Shortcut for doing `$$('div', 'clear')` `$$('div')`
 
 Benchmarks
 ------------
 
-	No cache: 444ms
-	Selector Cache plugin: 3ms
-	Storing results in variables: 2ms
+    No cache: 444ms
+    Selector Cache plugin: 3ms
+    Storing results in variables: 2ms

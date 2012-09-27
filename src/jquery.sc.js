@@ -1,7 +1,7 @@
 /*
  * Selector Cache sc
  * Cache your selectors, without messy code.
- * @author Stephen Kamenar
+ * @author Stephen Kamenar (forked and modified by @timmfin)
  */
 (function ($) {
 	$.sc = function(selector, action) {
@@ -47,5 +47,10 @@
 			selector_clear(selector);
 			return selector_get(selector);
 		}
+	};
+
+	// If we are not in no-conflict mode, make '$$' shortcut
+	if (window.$ === $ && !window.$$) {
+		window.$$ = $.sc;
 	}
 }(jQuery));
